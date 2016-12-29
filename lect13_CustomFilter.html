@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="angular.js"></script>
+	<script src="lect13_CustomFilter.js"></script>
+	<title>Filter Example</title>
+
+</head>
+<body ng-app="FilterEg">
+	<div ng-controller="FilterController">
+		<b>Original Msg:</b>  {{sayMessage()}} <br>
+		<b>Changed Msg:</b> {{sayLovesMessage()}}<br>
+		<b>Truth:</b>{{sayLovesMessage() | truth :'healthy' : 'cookie' | uppercase}}
+
+
+
+	</div>
+
+</body>
+</html>

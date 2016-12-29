@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="angular.js"></script>
+	<script src="ass.js"></script>
+	<title>Assignment 1</title>
+</head>
+<body ng-app="LunchCheck">
+
+	<div ng-controller="LunchCheckController">
+		Enter Food items:<br>
+		<div>
+			<textarea ng-model="lunch"></textarea><br>
+			<button ng-click="check(lunch)">Check If Too Much</button><br>
+			<p ng-bind="message"></p>
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>

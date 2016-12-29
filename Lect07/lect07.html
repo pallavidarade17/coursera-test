@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Custom Attributes</title>
+</head>
+<body>
+<h1>HTML Custom Attributes</h1>
+<!-- we can declare any attribute and call it in script using getAtrr() eg :greeting and ng-app is user defined not standard  -->
+<div id="target" ng-app="myTestApp" greeting="hello">
+	<section>Section 1
+		<article>Article 1</article>
+	</section>
+<script>
+/*var elem = document.getElementById('target');
+console.log(elem);
+
+console.log(elem.getAttribute('ng-app'));*/
+
+var elem2 =document.querySelector("[ng-app]");
+console.log(elem2);
+console.log(elem2.getAttribute('ng-app'));
+console.log(elem2.getAttribute('greeting'));
+//dislay the value and formating on my way  
+var doc =elem2.getAttribute('greeting');
+document.write(doc.toUpperCase());
+
+
+</script>
+
+</div>
+</body>
+</html>

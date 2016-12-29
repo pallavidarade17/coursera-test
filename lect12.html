@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="angular.js"></script>
+	<script src="lect12.js"></script>
+	<title>Filter Example</title>
+
+</head>
+<body ng-app="FilterEg">
+	<div ng-controller="FilterController">
+		{{name}}
+		{{cookieCost | currency : "Rs" : 4}}
+
+
+	</div>
+
+</body>
+</html>

@@ -1,8 +1,19 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<script src="angular.js"></script>
+	<script src="app.js"></script>
+	<title>Name Calculator</title>
 </head>
-<body>
-<h1>Hello Cousera Student</h1>
+<body ng-app="NameCalculator">
+	<h1>My First AngularJS App</h1>
+<div ng-controller="NameCalculateController">
+	<div>Your name:
+		<input type="text" ng-model="name" ng-keyup="displayNumeric()"/> {{name}}</div>
+
+<div> Your total numeric value of name is:
+{{totalvalue}}</div>
+</div>
 </body>
 </html>
+
