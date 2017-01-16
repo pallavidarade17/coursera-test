@@ -1,0 +1,28 @@
+<!Doctype html>
+<html ng-app="ShoppingListApp">
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script src="lect20.js"></script>
+</head>
+<body>
+	<h1>Custom Service</h1>
+	<div ng-controller="ShoppingListAddController as itemAdder">
+		<input type="text" ng-model="itemAdder.itemName" placeholder="itemName" />
+		<input type="text" ng-model="itemAdder.itemQuantity" placeholder="itemQuantity"	/>
+		<button ng-click="itemAdder.addItem();">Add Item to Shopping List</button>
+	</div>
+	
+	<div ng-controller="ShoppingListShowController as showList">
+		<ol>
+			<li ng-repeat="item in showList.items">
+				{{item.quantity }} of {{item.name}}
+				<button ng-click="showList.removeItem($index);">Remove item</button>
+
+			</li>
+
+		</ol>
+	</div>
+
+</body>
+</html>
