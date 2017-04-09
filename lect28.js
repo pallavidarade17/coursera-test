@@ -5,28 +5,30 @@
 	.controller('ShoppingListController1',ShoppingListController1)
 	.controller('ShoppingListController2',ShoppingListController2)
 	.factory('ShoppingListFactory',ShoppingListFactory)
-	.directive('listItemDescription',ListItemDescription)
-	.directive('listItem',ListItem);
+	/*.directive('listItemDescription',ListItemDescription)
+	.directive('listItem',ListItem);*/
+	.directive('shoppingList',ShoppingList);
 
  /*function Demo($scope){
  $scope.name="Pallavi";
  }
 */
-function ListItem(){
+function ShoppingList(){
 		//directive defination object -ddo
 		var ddo ={
-			templateUrl:'listItem26.html'
+			templateUrl:'listItem28.html',
+			scope:{
+				// attribute in element is only list <shopping-list list="list1"></shopping-list>
+				//list:'='
+				// attribute in element is my-list
+				list:'=myList',
+				title:'@title'
+			}
 		};
 		return ddo;
 	}
 
-	function ListItemDescription(){
-		//directive defination object -ddo
-		var ddo ={
-			template:'{{item.quantity}} of {{item.name}}'
-		};
-		return ddo;
-	}
+	
 	
 ShoppingListController1.$inject=['ShoppingListFactory'];
 
@@ -37,10 +39,12 @@ function ShoppingListController1(ShoppingListFactory){
 
 	list.itemName="";
 	list.itemQuantity="";
-
+	var originalTitle ="Shopping List #1";
+	list.title= originalTitle +"("+list.items.length + " items )";
 	list.addItem=function(){
 		try{
 			shoppingList.addItem(list.itemName,list.itemQuantity);
+			list.title= originalTitle +"("+list.items.length + " items )";
 
 		}
 		catch(error){
@@ -50,6 +54,7 @@ function ShoppingListController1(ShoppingListFactory){
 
 	list.removeItem=function(itemIndex){
 			shoppingList.removeItem(itemIndex);
+			list.title= originalTitle +"("+list.items.length + " items )";
 		};
 }
 
