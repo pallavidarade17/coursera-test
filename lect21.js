@@ -86,7 +86,8 @@ function ShoppingListFactory(){
 	var factory = function(maxItems){
 		return new ShoppingListService(maxItems);
 	};
-	return factory;
+	
+	return factory
 }//ShoppingListFactory
 
 

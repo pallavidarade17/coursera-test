@@ -30,7 +30,7 @@ function ShoppingListController(ShoppingListService){
 		
 	};
 	list.removeItem =function(itemIndex){
-		ShoppingListService.removeItem(itemIndex);
+		ShoppingListService.removeItem(itemIndex,1);
 
 	};
 }
@@ -40,11 +40,11 @@ function ShoppingListService(maxItems){
 
 	  // List if shopping items 
 	  var items=[];
-	   service.addItem = function(itemName, quantity){
+	   service.addItem = function(itemName, itemQuantity){
 	   	if((maxItems==undefined) || (maxItems!== undefined) && (items.length <maxItems)){
 	   		var item={
 	   			name:itemName,
-	   			quantity:quantity
+	   			quantity:itemQuantity
 	   		};
 
 	   		items.push(item);

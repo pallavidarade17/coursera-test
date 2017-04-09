@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListPromiseApp">
+<head>
+	<title>Custom Service</title>
+	<script src="angular.js"></script>
+	<script src="lect24.js"></script>
+</head>
+<body>
+
+<div ng-controller="ShoppingListController as list">
+<h2>Shopping list</h2>
+
+Add Item:<input type="text" ng-model="list.itemName"/><br>
+Add Quantity:<input type="text" ng-model="list.itemQuantity"/><br>
+
+<button ng-click="list.addItem();">Add Item</button>
+<ol>
+	<li ng-repeat="item in list.items">
+	{{item.name}} boxes of {{item.quantity}}
+	<button  ng-click="list.removeItem($index);">Remove Item</button>
+	</li>
+</ol>
+</div>
+
+
+</body>
+</html>

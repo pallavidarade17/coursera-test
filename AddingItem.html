@@ -1,0 +1,88 @@
+<html >
+<head>
+	<title>Adding Item</title>
+	<script src="angular.js"></script>
+	<script>
+	var myapp=angular.module('myModule', []);
+	myapp.controller("myController",function($scope){
+		$scope.items=[];
+
+		$scope.add=function(){
+			var item={
+				name:$scope.name,
+				quantity:$scope.quantity
+			}
+
+		 	$scope.items.push(item);
+
+		 	$scope.name='';
+		 	$scope.quantity=''
+		}
+
+
+
+		$scope.cars=[];
+                $scope.submit=function(){
+                  $scope.cardetails={
+                      name:$scope.name,
+                      brand:$scope.brand,
+                     rating:$scope.rating
+                  }  
+                  $scope.cars.push($scope.cardetails);
+                  // alert("hekllo"+$scope.cars);
+                    $scope.name='';
+                    $scope.brand='';
+                    $scope.rating='';
+                    
+                }   
+
+	})
+
+
+
+	</script>
+
+</head>
+<body ng-app="myModule">
+
+	<div ng-controller="myController">
+		<input type="text" ng-model="name" />
+		<input type="text" ng-model="quantity" />
+		<button ng-click="add()">Add</button>
+
+		<ul>
+			<li ng-repeat="item in items">{{item.quantity}} of {{item.name}}</li>
+		</ul>
+
+		<table>
+			<tr  ng-repeat="item in items">
+				<td>{{item.name}}</td>
+				<td>{{item.quantity}}</td>
+				
+			</tr>
+		</table>
+
+
+Name:<input type="text" ng-model="name"><br/>
+Brand:<input type="text" ng-model="brand">
+<br/>Rating:<input type="text" ng-model="rating"><br/>
+<input type="button" value="Submit" ng-click="submit()">'
+
+
+
+		 <table>
+            <tr><td>Name</td>
+                <td>Brand</td>
+                <td>Rating</td>
+            </tr>
+            <tr ng-repeat="car in cars">
+                <td> {{car.name}}</td>
+                <td>{{car.brand}}</td>
+                <td>{{car.rating}}</td>
+            </tr>
+        
+        </table>
+	</div>
+</body>
+
+</html>

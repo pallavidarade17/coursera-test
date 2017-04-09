@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListPromiseApp">
+<head>
+	<title>Custom Service</title>
+	<script src="angular.js"></script>
+	<script src="lect25.js"></script>
+</head>
+<body>
+<h1>Using $http Services </h1>
+<div ng-controller="MenuCategoriesController as menu">
+<h2>List of `Menu Categories</h2>
+
+<ul>
+	<li ng-repeat ="category in menu.categorsies">
+		({{category.short_name}})
+		{{category.name}}
+	</li>
+</ul>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListDirectiveApp">
+<head>
+	<title>Template Expanding Directive</title>
+	<script src="angular.js"></script>
+	<script src="lect26.js"></script>
+</head>
+<body>
+<h1>Template Expanding Directive </h1>
+<!-- <div ng-controller="Demo">{{name}} </div> -->
+
+<!-- LIST #1 unlimited items -->
+
+<div id="list1" ng-controller="ShoppingListController1 as list">
+
+<h2>Shopping List #1</h2>
+<input type="text" ng-model="list.itemName" placeholder="itemName"> 
+<input type="text"  ng-model="list.itemQuantity" placeholder="quantity">
+<button ng-click="list.addItem();">Add item</button>
+<ol>
+<!-- <li ng-repeat="item in list.items">
+<list-item-description></list-item-description>
+<button ng-click="list.removeItem($index);">Remove</button>
+</li> -->
+
+<list-item ng-repeat="item in list.items"></list-item>
+
+</ol>
+
+
+<div ng-if="list.errorMessage" class="error">Error:
+	{{list.errorMessage}}<br/>
+</div>
+</div>
+
+<!-- LIST #2 limited items -->
+<div id="list2" ng-controller="ShoppingListController2 as list">
+<h2>Shopping List #2 (limited to 3 items)</h2>
+<input type="text" ng-model="list.itemName" placeholder="item name">
+<input type="text"  ng-model="list.itemQuantity" placeholder="quantity">
+<button ng-click="list.addItem();">Add item</button>
+<ol>
+
+<li ng-repeat="item in list.items">
+<list-item-description></list-item-description>
+<button ng-click="list.removeItem($index);">Remove</button>
+</li>
+<!-- <list-item></list-item> -->
+
+
+</ol>
+<div ng-if="list.errorMessage" class="error">Error:
+	{{list.errorMessage}}<br/>
+</div>
+
+<!-- <div class="error">Error:{{list.errorMessage}}</div> -->
+</div>
+
+</body>
+</html>
