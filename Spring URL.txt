@@ -1,0 +1,47 @@
+https://www.youtube.com/watch?v=dAlo7JkfIKc&list=PLd3UqWTnYXOnPXUiI2yTj1AwS5kw_gB70     Spring Session	
+
+http://docs.spring.io/spring-ws/sites/1.5/reference/html/index.html  Spring Web Services - Reference Documentation
+ 
+
+https://material.angularjs.org/latest/demo/navBar   // Advance
+https://www.youtube.com/watch?v=WuiHuZq_cg4&list=PL173F1A311439C05D   Angular
+https://www.toptal.com/angular-js/interview-questions
+
+https://www.youtube.com/watch?v=MzqkIZLkBsU&list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl&index=6
+
+https://docs.npmjs.com/getting-started/installing-node
+ 
+https://egghead.io/  ANGULAR  thinkster  plunker
+
+https://github.com/jhu-ep-coursera/fullstack-course5
+
+https://githowto.com/aliases
+https://dzone.com/articles/angularjs-how-code-quickly
+
+
+C:\Users\Pallavi\AppData\Local\atom
+
+	browser-sync --version
+browser-sync start --server --directory --files "**/*"
+http://localhost:3000/
+
+
+
+pallavi@ABC-course.com  Pallavi 
+
+git status
+ 
+git add.
+
+git status 
+
+git commit -m "" 
+
+git config --global user.email ""
+git config --global user.name ""
+git push
+pallavidarade17
+Sony@179
+
+
+Assign 1 URL:https://pallavidarade17.github.io/assignments/assignment1/
