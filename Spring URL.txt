@@ -19,7 +19,7 @@ https://githowto.com/aliases
 https://dzone.com/articles/angularjs-how-code-quickly
 
 
-C:\Users\Pallavi\AppData\Local\atom
+
 
 	browser-sync --version
 browser-sync start --server --directory --files "**/*"
@@ -40,8 +40,6 @@ git commit -m ""
 git config --global user.email ""
 git config --global user.name ""
 git push
-pallavidarade17
-Sony@179
+pd17
+CGPwd1
 
-
-Assign 1 URL:https://pallavidarade17.github.io/assignments/assignment1/
